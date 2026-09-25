@@ -1,16 +1,26 @@
-# OOP'S
-# Classes & Objects ->>>
-# A class is just a template. It doesn't hold any real data on its own. When you
-# create an object from a class that's when actual data gets stored and
-# actions can be performed.
+"""OOP'S
+What is OOP?
+Before OOP, code was written as a long list of instructions. As projects grew
+bigger, it became messy and hard to manage. OOP solves this by
+organizing code around real-world objects.
 
-# . Class = Blueprint (e.g. design plan of a house)
-# . Object = Actual instance built from that blueprint (e.g. the real house)
-# . A class defines what attributes (data) and methods (actions) an object will have
-# . Multiple objects can be created from the same class, each with their own data
-# . Example( "Car" is a class. Your Honda City and your friend's Swift are two different objects
+. Everything in the real world is an sbiect - OOP brings that thinking into code
+. Code is organized into classes making it clean and structured
+. Easier to debug, extend, and maintain large applications
+. Built on 4 core pillars: Encapsulation, Inheritance, Polymorphism, Abstraction
 
-###################################################################
+Classes & Objects ->>>
+A class is just a template. It doesn't hold any real data on its own. When you
+create an object from a class that's when actual data gets stored and
+actions can be performed.
+
+. Class = Blueprint (e.g. design plan of a house)
+. Object = Actual instance built from that blueprint (e.g. the real house)
+. A class defines what attributes (data) and methods (actions) an object will have
+. Multiple objects can be created from the same class, each with their own data
+. Example( "Car" is a class. Your Honda City and your friend's Swift are two different objects"""
+
+###########################################################################################################
 # Class & Object ->>
 
 class Student:
@@ -81,7 +91,8 @@ class Student:
      
     # Methods 
     def display(self):
-        print(f"My name is {self.name} , age is {self.age} and gender is {self.gender}")
+        # self se ye pta chlta h ki hmare ess method ko kisne call kiya .
+    # {f-string} print(f"My name is {self.name} , age is {self.age} and gender is {self.gender}")
 
 s1 = Student()
 s1.name="Ayush"
@@ -160,8 +171,9 @@ class Student:
         print(f"My name is {self.name}  age is {self.age} and gender is {self.gender}")
 
 s1 = Student()
-s1.set_info("ayush",20,"male")
-s1.display()
+s1.set_info("ayush",20,"male") 
+# age int h agr string hm bejte h toh glt nhi mana jayega error nhi ayega python me ..
+s1.display()   
 
 
 class Student:
@@ -208,7 +220,6 @@ s2 = Student()
 
 # agr hmse kabhi bhi jo upper se hmne pass kiya h agr vo krn bhul jaye toh error aa jayega ..
 # hm ye chah rhe h jaise hi object bne hm data mang le eske liye initializer bnna pdta h ya ussi ko hm constructor bhi bolte h .... 
-# s1.display()
 
 
 class Student:
@@ -219,6 +230,7 @@ class Student:
         self.gender = gender
 
     def display(self)->None:
+        # None represents its cannot return anythings 
         print(f"My name is {self.name} and age will be {self.age} and gender will be {self.gender}")
 
     def get_age(self)->int:
@@ -232,3 +244,86 @@ print(s1.get_age())
 # jb koi bhi function kuch bhi return nhi krta h tb hm vha none lga dete h...
 
 ####################################################################################################################################################################################################################################################################################################################
+"""
+class Student:
+    name = ""
+    age = 0
+    gender = ""
+
+    def info(self):
+        self.name = input("enter the name")
+        self.age = input("enter the age")
+        self.gender = input("enter the gender")
+        
+    def display(self):
+        print(f" my name is {self.name} , my age is {self.age} , my gender is {self.gender}")
+
+s1 = Student()
+s1.info() 
+s1.display()
+
+s2 = Student()
+s2.info()
+s2.display() 
+
+""" 
+##############################################################
+
+"""
+class Student:
+    name = ""
+    age = 0
+    gender = ""
+
+    def info(self,name,age,gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        
+    def display(self):
+        print(f" my name is {self.name} , my age is {self.age} , my gender is {self.gender}")
+
+s1 = Student()
+s1.info("ayush",23,"male")      00000000000000000000
+s1.display() 
+
+""" 
+###########################################################
+ 
+"""
+class Student:
+
+Agr hm attributes ko hta dete h , toh info call ke tym vo attribute create krega , phle kya krta tha update krta tha ab create krega ...
+
+    def info(self,name,age,gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        
+    def display(self):
+        print(f" my name is {self.name} , my age is {self.age} , my gender is {self.gender}")
+
+s1 = Student()
+s1.info("ayush",23,"male")  
+s1.display() 
+
+"""   
+#########################################################
+
+"""
+class Student:
+
+    
+    def __init__(self,name,age,gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+    def display(self):
+        print(f"my name is {self.name},my age is {self.age},my gender is {self.gender}")
+
+s1 = Student("AYUSH",23,"MALE")
+s1.display()  
+
+"""
+

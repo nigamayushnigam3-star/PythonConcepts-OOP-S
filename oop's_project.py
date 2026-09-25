@@ -1,17 +1,17 @@
-#  MINI PROJECT ->>>>>>>>>>>>>>
+""" MINI PROJECT ->>>>>>>>>>>>>>
 
-# Attributes:
-# movie_name -> name of the movie
-# total_seats -> total seats available in the theatre
-# ticket_price -> price per ticket
-# booked_seats -> starts at 0
+Attributes:
+movie_name -> name of the movie
+total_seats -> total seats available in the theatre
+ticket_price -> price per ticket
+booked_seats -> starts at 0
 
-# Methods:
-# book_ticket(num_tickets) - books the given number of tickets. If enough seats are available,
-# confirm the booking and show the total amount to pay. If not,
-# show "Sorry, not enough seats available"
+Methods:
+book_ticket(num_tickets) - books the given number of tickets. If enough seats are available,
+confirm the booking and show the total amount to pay. If not,
+show "Sorry, not enough seats available"
 
-# show_status() - displays movie name, seats available, and seats booked so far
+show_status() - displays movie name, seats available, and seats booked so far """ 
 
 
 class Movie:
@@ -27,7 +27,7 @@ class Movie:
         else:
             self.booked_seats += num_of_tickets
             self.total_seats -= num_of_tickets
-            print(f"Your ticket is booked")
+            print(f"Your ticket is booked") 
             print(f"Total price = {self.ticket_price * num_of_tickets}\n")
 
     def show_status(self)-> None:
